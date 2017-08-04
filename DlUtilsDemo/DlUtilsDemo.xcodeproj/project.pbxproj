@@ -16,6 +16,8 @@
 		0C9147DF1F34592B001180A1 /* DlUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9147D81F34592B001180A1 /* DlUtils.framework */; };
 		0C9147E01F34592B001180A1 /* DlUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9147D81F34592B001180A1 /* DlUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0C9147E61F345D19001180A1 /* DLString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9147E51F345D19001180A1 /* DLString.swift */; };
+		0C9147EC1F346E64001180A1 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 0C9147EB1F346E64001180A1 /* Cartfile */; };
+		0C9147EF1F347CD9001180A1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9147EE1F347CD9001180A1 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		0C9147DA1F34592B001180A1 /* DlUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DlUtils.h; sourceTree = "<group>"; };
 		0C9147DB1F34592B001180A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C9147E51F345D19001180A1 /* DLString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLString.swift; sourceTree = "<group>"; };
+		0C9147EB1F346E64001180A1 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
+		0C9147EE1F347CD9001180A1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C9147EF1F347CD9001180A1 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,7 @@
 				0C9147C01F3458EA001180A1 /* DlUtilsDemo */,
 				0C9147D91F34592B001180A1 /* DlUtils */,
 				0C9147BF1F3458EA001180A1 /* Products */,
+				0C9147ED1F347CD9001180A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +107,7 @@
 				0C9147C51F3458EA001180A1 /* Main.storyboard */,
 				0C9147C81F3458EA001180A1 /* Assets.xcassets */,
 				0C9147CA1F3458EA001180A1 /* LaunchScreen.storyboard */,
+				0C9147EB1F346E64001180A1 /* Cartfile */,
 				0C9147CD1F3458EA001180A1 /* Info.plist */,
 			);
 			path = DlUtilsDemo;
@@ -114,6 +121,14 @@
 				0C9147E51F345D19001180A1 /* DLString.swift */,
 			);
 			path = DlUtils;
+			sourceTree = "<group>";
+		};
+		0C9147ED1F347CD9001180A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C9147EE1F347CD9001180A1 /* Alamofire.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +231,7 @@
 			files = (
 				0C9147CC1F3458EA001180A1 /* LaunchScreen.storyboard in Resources */,
 				0C9147C91F3458EA001180A1 /* Assets.xcassets in Resources */,
+				0C9147EC1F346E64001180A1 /* Cartfile in Resources */,
 				0C9147C71F3458EA001180A1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +425,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DlUtils/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -434,6 +454,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DlUtils/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
