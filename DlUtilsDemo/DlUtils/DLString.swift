@@ -7,9 +7,14 @@
 //
 
 import Foundation
+import Alamofire
 
 extension String {
    public static func dl() ->String{
         return "hello world!"
+    }
+    
+    public func request() -> Alamofire.DataRequest{
+        return Alamofire.request(self)
     }
 }

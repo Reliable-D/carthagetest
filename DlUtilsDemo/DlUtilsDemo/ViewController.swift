@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import DlUtils
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print("dl:\(String.dl())")
+        
+        "https://www.baidu.com".request()
+//        "https://www.baidu.com".request().responseString { (responseString) in
+//            print("response:\(responseString)")
+//        }
     }
 
     override func didReceiveMemoryWarning() {

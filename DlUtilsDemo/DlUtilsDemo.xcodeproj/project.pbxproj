@@ -16,8 +16,7 @@
 		0C9147DF1F34592B001180A1 /* DlUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9147D81F34592B001180A1 /* DlUtils.framework */; };
 		0C9147E01F34592B001180A1 /* DlUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9147D81F34592B001180A1 /* DlUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0C9147E61F345D19001180A1 /* DLString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9147E51F345D19001180A1 /* DLString.swift */; };
-		0C9147EC1F346E64001180A1 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 0C9147EB1F346E64001180A1 /* Cartfile */; };
-		0C9147EF1F347CD9001180A1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9147EE1F347CD9001180A1 /* Alamofire.framework */; };
+		0CAC540021252073002B53E7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9147EE1F347CD9001180A1 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +55,6 @@
 		0C9147DA1F34592B001180A1 /* DlUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DlUtils.h; sourceTree = "<group>"; };
 		0C9147DB1F34592B001180A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C9147E51F345D19001180A1 /* DLString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLString.swift; sourceTree = "<group>"; };
-		0C9147EB1F346E64001180A1 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		0C9147EE1F347CD9001180A1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C9147EF1F347CD9001180A1 /* Alamofire.framework in Frameworks */,
+				0CAC540021252073002B53E7 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +105,6 @@
 				0C9147C51F3458EA001180A1 /* Main.storyboard */,
 				0C9147C81F3458EA001180A1 /* Assets.xcassets */,
 				0C9147CA1F3458EA001180A1 /* LaunchScreen.storyboard */,
-				0C9147EB1F346E64001180A1 /* Cartfile */,
 				0C9147CD1F3458EA001180A1 /* Info.plist */,
 			);
 			path = DlUtilsDemo;
@@ -172,6 +169,7 @@
 				0C9147D41F34592B001180A1 /* Frameworks */,
 				0C9147D51F34592B001180A1 /* Headers */,
 				0C9147D61F34592B001180A1 /* Resources */,
+				0CAC540321252704002B53E7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -231,7 +229,6 @@
 			files = (
 				0C9147CC1F3458EA001180A1 /* LaunchScreen.storyboard in Resources */,
 				0C9147C91F3458EA001180A1 /* Assets.xcassets in Resources */,
-				0C9147EC1F346E64001180A1 /* Cartfile in Resources */,
 				0C9147C71F3458EA001180A1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,6 +241,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CAC540321252704002B53E7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0C9147BA1F3458EA001180A1 /* Sources */ = {
@@ -490,6 +504,7 @@
 				0C9147D21F3458EA001180A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C9147E11F34592B001180A1 /* Build configuration list for PBXNativeTarget "DlUtils" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +513,7 @@
 				0C9147E31F34592B001180A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
