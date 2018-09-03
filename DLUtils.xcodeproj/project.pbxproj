@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0CADC827213CDA9E00F39ADF /* DLUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CADC825213CDA9E00F39ADF /* DLUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0CADC82F213CDB4900F39ADF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CADC82E213CDB4900F39ADF /* Alamofire.framework */; };
+		0CADC835213CE4FF00F39ADF /* DLUtilsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CADC834213CE4FE00F39ADF /* DLUtilsObject.swift */; };
+		0CADC837213CE5B000F39ADF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0CADC836213CE5B000F39ADF /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +18,8 @@
 		0CADC825213CDA9E00F39ADF /* DLUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLUtils.h; sourceTree = "<group>"; };
 		0CADC826213CDA9E00F39ADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CADC82E213CDB4900F39ADF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		0CADC834213CE4FE00F39ADF /* DLUtilsObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLUtilsObject.swift; sourceTree = "<group>"; };
+		0CADC836213CE5B000F39ADF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 		0CADC818213CDA9D00F39ADF = {
 			isa = PBXGroup;
 			children = (
+				0CADC836213CE5B000F39ADF /* README.md */,
 				0CADC824213CDA9E00F39ADF /* DLUtils */,
 				0CADC823213CDA9E00F39ADF /* Products */,
 				0CADC82D213CDB4800F39ADF /* Frameworks */,
@@ -51,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				0CADC825213CDA9E00F39ADF /* DLUtils.h */,
+				0CADC834213CE4FE00F39ADF /* DLUtilsObject.swift */,
 				0CADC826213CDA9E00F39ADF /* Info.plist */,
 			);
 			path = DLUtils;
@@ -107,6 +113,7 @@
 				TargetAttributes = {
 					0CADC821213CDA9E00F39ADF = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -132,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CADC837213CE5B000F39ADF /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CADC835213CE4FF00F39ADF /* DLUtilsObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +280,7 @@
 		0CADC82B213CDA9E00F39ADF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -293,6 +303,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dl.DLUtils;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -301,6 +312,7 @@
 		0CADC82C213CDA9E00F39ADF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
