@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class DLUtilsObject: NSObject {
+open class DLUtilsObject: NSObject {
 
     func request(url :String) -> Void {
         Alamofire.request(url).responseJSON { (response) in
