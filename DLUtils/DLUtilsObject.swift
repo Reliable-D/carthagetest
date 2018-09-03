@@ -11,7 +11,7 @@ import Alamofire
 
 open class DLUtilsObject: NSObject {
 
-    func request(url :String) -> Void {
+   open func request(url :String) -> Void {
         Alamofire.request(url).responseJSON { (response) in
             print("response:\(response)")
         }
